@@ -9,7 +9,7 @@ public class GestionPvP implements Listener {
 
     @EventHandler
     public static void onPvP(EntityDamageByEntityEvent event) {
-        if(event.getDamager() instanceof Player){
+        if(event.getDamager() instanceof Player && event.getEntity() instanceof Player){
             event.setCancelled(true);
         }
     }
